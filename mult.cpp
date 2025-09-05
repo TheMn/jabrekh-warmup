@@ -4,9 +4,19 @@ using namespace std;
 typedef vector<vector<int> > Matrix;
 typedef vector<int> Vector;
 
+/**
+ * @brief Multiplies two matrices.
+ *
+ * This function takes two matrices, `a` and `b`, and returns their product.
+ * The number of columns in matrix `a` must be equal to the number of rows
+ * in matrix `b`.
+ *
+ * @param a The first matrix (left-hand side).
+ * @param b The second matrix (right-hand side).
+ * @return Matrix The resulting matrix product.
+ */
 Matrix mult(Matrix a, Matrix b){
     Matrix c(a.size(), Vector (b[0].size()));
-    // c.resize(a.size()*b[0].size());
     if(a[0].size() == b.size())
         for(int k=0; k<a[0].size(); k++){
             for(int i=0; i<a.size(); i++){
